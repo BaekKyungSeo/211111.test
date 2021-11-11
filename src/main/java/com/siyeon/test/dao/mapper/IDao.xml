@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+    
+<mapper namespace="com.siyeon.test.dao.IDao">
+	<select id="listDao" resultType="com.siyeon.test.dto.MemberDto">
+		SELECT * FROM MEMBERTBL ORDER BY SID DESC
+	</select>
+	
+	<select id="mbDao">
+		INSERT INTO MEMBERTBL (SID,SNAME, SPHONE, SADDR) VALUES (MEMBERTBL_SEQ.NEXTVAL, #{param1}, #{param2}, #{param3})
+	</select>
+	
+	<select id="delDao">
+		DELETE FROM MEMBERTBL WHERE SID = #{param1}
+	</select>
+		
+	<select id="modifyDao">
+		UPDATE MEMBERTBL SET SNAME = ?, SPHONE = ?, SADDR = ? WHERE SID = ?;
+	</select>
+	
+	<select id="modifyFormDao" resultType="com.siyeon.test.dto.MemberDto">
+		SELECT * FROM MEMBERTBL WHERE SID = #{param1}
+	</select>
+</mapper>
