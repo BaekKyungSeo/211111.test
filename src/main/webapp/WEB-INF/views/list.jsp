@@ -8,8 +8,9 @@
 <title>list.jsp</title>
 </head>
 <body>
-	<h2>회원 목록</h2>
 
+	<h2>회원 목록</h2>
+	
 	<table width="500" cellpadding="0" cellspacing="0" border="1">
 		<tr>
 			<td>번호</td>
@@ -30,7 +31,8 @@
 		</tr>
 		</c:forEach>
 		<tr>
-			<td colspan="6"><a href="memberForm">회원추가</a></td>
+			<td colspan="2">총 인원수</td>
+			<td colspan="4"><a href="memberForm">회원추가</a></td>
 		</tr>
 	</table>
 </body>
